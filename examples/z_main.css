@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap');
+font-family: 'Space Grotesk', sans-serif;
+
+
+
 body {
 	margin: 0;
 	background-color: #000;
 	color: #fff;
-	font-family: Monospace;
+	font-family: 'Space Grotesk';
+	font-weight: 400
 	font-size: 13px;
 	line-height: 24px;
 	overscroll-behavior: none;
@@ -85,13 +91,3 @@ a, button, input, select {
 
 
 
-.rotate_button{
-	border: none;
-	border-radius: 10px;
-	margin-top: 9vh;
-	padding: 4px 8px;
-	font-size: 20px;
-	color: #5a5a5a;
-	background-color: rgb(227 227 209);
-
-}

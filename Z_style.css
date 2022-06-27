@@ -1,0 +1,22 @@
+body {
+	margin: 0;
+	background-color: #000;
+	color: #fff;
+	font-family: Monospace;
+	font-size: 13px;
+	line-height: 24px;
+	overscroll-behavior: none;
+}
+
+.container_text {
+	position: absolute;
+    margin: 0;
+    width: 100vw;
+}
+
+.main_column{
+	width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+
+}

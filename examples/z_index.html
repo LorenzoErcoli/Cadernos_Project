@@ -53,7 +53,7 @@
 			let textureEquirec, textureCube, textureEquirecBackground;
 			let sphereMesh, sphereMaterial, crow_group_spheres;
 			let sphere_object3d
-			let radius = 3000
+			let radius = 2000
 
 			let delta_y = 0
 			let inc_move = 0
@@ -62,13 +62,13 @@
 
 
 			const fold_image = [
+				"textures/zz_Spheres_Img/Shpere01.jpg",
 				"textures/zz_Spheres_Img/Shpere02.jpg",
 				"textures/zz_Spheres_Img/Shpere03.jpg",
-				"textures/zz_Spheres_Img/Shpere03.jpg",
-				"textures/zz_Spheres_Img/Shpere03.jpg",
-				"textures/zz_Spheres_Img/Shpere03.jpg",
-				"textures/zz_Spheres_Img/Shpere03.jpg",
-				"textures/zz_Spheres_Img/Shpere03.jpg"
+				"textures/zz_Spheres_Img/Shpere04.jpg",
+				"textures/zz_Spheres_Img/Shpere05.jpg",
+				"textures/zz_Spheres_Img/Shpere06.jpg"
+
 			]
 
 
@@ -100,21 +100,23 @@
 				// Textures
 
 				const loader = new THREE.CubeTextureLoader();
-				loader.setPath( 'textures/cube/ImgCube/' );
-
-				// textureCube = loader.load( [ 'posx.jpg', 'negx.jpg', 'posy.jpg', 'negy.jpg', 'posz.jpg', 'negz.jpg' ] );
-				// textureCube.encoding = THREE.sRGBEncoding;
-
-
-				textureCube = loader.load( [ 'negx.jpg', 'negx.jpg', 'negx.jpg', 'negx.jpg', 'negx.jpg', 'negx.jpg']);
+				loader.setPath( 'textures/cube/DIARIO2/' );
+				textureCube = loader.load( [ 'posx.jpg', 'negx.jpg', 'posy.jpg', 'negy.jpg', 'posz.jpg', 'negz.jpg' ] );
 				textureCube.encoding = THREE.sRGBEncoding;
+
+
+				// textureCube = loader.load( [ 'negx.jpg', 'negx.jpg', 'negx.jpg', 'negx.jpg', 'negx.jpg', 'negx.jpg']);
+				const loader_2 = new THREE.CubeTextureLoader();
+				loader_2.setPath( 'textures/cube/ImgCube/' );
+				let textureCube_2 = loader_2.load( [ 'posx.jpg', 'negx.jpg', 'posy.jpg', 'negy.jpg', 'posz.jpg', 'negz.jpg' ] );
+				textureCube_2.encoding = THREE.sRGBEncoding;
 
 
 
 
 
 				const textureLoader = new THREE.TextureLoader();
-				textureEquirecBackground = textureLoader.load( "textures/Background_full.jpg" );
+				textureEquirecBackground = textureLoader.load( "textures/Background_full_pink.jpg" );
 				textureEquirecBackground.mapping = THREE.EquirectangularReflectionMapping;
 				textureEquirecBackground.encoding = THREE.sRGBEncoding;
 				
@@ -143,10 +145,10 @@
 
 					// sphereMaterial = new THREE.MeshLambertMaterial( { envMap: textureCube} );
 					sphereMaterial = new THREE.MeshStandardMaterial( { 
-						color: "#f0f0f0",
+						color: "#FAEFCB",
 						emissive: "#000000",
-						metalness: 0.01,
-						roughness: 0,
+						metalness: 0.25,
+						roughness: 0.08,
 						map: textureEquirec,
 						envMap: textureEquirecBackground
 						});
