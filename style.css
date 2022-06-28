@@ -119,15 +119,16 @@ p{
 }
 
 .rotate_button{
+	position: absolute;
 	border: none;
 	border-radius: 50%;
 	background-color: var(--blue-dark);
 	line-height: 0;
 	padding: 4px;
     position: fixed;
-    right: 5vw;
+    left: 90%;
     bottom: 5vw;
-
+    z-index: 1;
 
 }
 
@@ -150,12 +151,12 @@ p{
 	background-color: #194b5ad4;
 	width: 100vw;
 	min-height: 100vh;
-	z-index: 9990;
-	opacity: 0;
+	z-index: 2;
+	/*opacity: 0;*/
 }
 
 .about_main_colum{
-	width: 90vw;
+	width: 90%;
 	max-width: 1800px;
 	margin: 150px auto;
 }
@@ -172,8 +173,9 @@ p{
 	line-height: 0;
 	padding: 4px;
     position: fixed;
-    right: 5vw;
+    left: 90%;
     top: 5vw;
+    z-index: 3;
 
 }
 
@@ -227,6 +229,14 @@ p{
 		margin: 25px auto;
 		
 
+	}
+
+	.rotate_button{
+    	left: 78%;
+	}
+
+	.close_button{
+		left: 78%;
 	}
 
 

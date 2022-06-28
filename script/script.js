@@ -27,13 +27,44 @@ function nascondi_loading_screen()
   function removeloading(){
 	  var el = document.getElementById('id_loading_page')
 	  el.remove()
+  };
+};
+
+
+
+function click_close(){
+
+  let status_about = document.getElementsByClassName('close_button_icon')[0].innerHTML
+  let w = window.innerWidth
+  console.log(w)
+
+
+  if (w < 600){
+    var_left_margin =  "78%"
+  }else{
+    var_left_margin =  "90%"
   }
-}
 
+  if (status_about == "close"){
 
+    console.log("chiudi")
 
-// function close(){
+    $(".about_text").animate({opacity: 0},300)
+    $("#id_about_page").animate({width: 0},1000)
+    $(".close_button").animate({left: "2%"},1000)
+
+    document.getElementsByClassName('close_button_icon')[0].innerHTML = "info"
   
-//   console.log("chiudi")
-//   $("#id_close_button").animate({opacity: 0},1000)
-// }
+  }else{
+
+
+    $(".about_text").animate({opacity: 1},1000)
+    $("#id_about_page").animate({width: "100%"},800)
+    $(".close_button").animate({left:  var_left_margin},1000)
+
+    document.getElementsByClassName('close_button_icon')[0].innerHTML = "close"
+
+  }
+
+
+}
